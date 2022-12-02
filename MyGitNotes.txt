@@ -1,0 +1,154 @@
+To know git installation is set correclty and to know the verison
+-->git --version
+To know the configurations have
+-->git config --list
+To add some new configurations (have to mention user to use remote git repo)
+-->git config --global user.name "aasifa"(can also add email property)
+To look at only one of the user config property
+-->git config user.name
+If u unsure about git commands just use git manual
+-->man git
+To get detail help about git command
+-->git help config
+///////////////////////////////////////////////////////////////
+Creating local repo:
+make directory
+-->mkdir web
+to go to Current directoru 
+cd web (cd .ssh etc)
+To start development work, create a local repo
+-->git init(an empty local repo has been created in a specific dir)
+To look how it lokks like 
+-->cd .git
+to view contents
+-->ls
+To go back to the previous dir
+-->cd..
+To navigate into the root directory, use "cd /"
+To navigate to your home directory, use "cd" or "cd ~"
+To navigate up one directory level, use "cd .."
+To navigate to the previous directory (or back), use "cd -"
+//////////////////////////////////////////////////////////////////////////
+To install git
+-->sudo apt install git(if it doesn't work, try with sudo yum install git)
+To check if git is instaled 
+-->git
+To get help
+-->git --help
+To get reuired help 
+Ex: git help branch
+To go to the specific directory
+-->cd ./(give 1st letter og direc & press tab)
+To list the branches have
+-->git branch(* indicates current branch u r in)
+To know the status of the git
+-->git status
+To create file in nano editor
+-->nano test.txt
+To commit the changes
+-->git commit -m "initial commit"(if we dont give msg it opens vim editor)
+To show list of all the commits made to a repository.
+-->git log
+-->git log -1 recent commit
+-->git log -2 recent 2 commits 
+git log
+git log --oneline
+git log stat
+To remove or delete the files or directories. 
+-->rm -r dir name
+--->rm filename
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Creating local repository
+mkdir
+cd
+git init
+cd .git
+ls
+cd ..(move out of git)
+nano test.txt
+to setup one more file
+-->echo "# MyFirstRepo" >> README.md(enters this msg in the readme file)
+ls
+-->git status
+-->to track file
+git add .
+git status
+Mater branch is created by defualt in git repo
+To commit
+git commit -m "msg"
+git log
+
+Creating a repository on github(create account and repo)
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Linking a local repo to a remote one:
+to know if repo is linked to remote
+-->git remote -v
+If it is not linked,
+-->git remote add origin git@github.com:AasifaShaik029/.git(if it doesnt display anything it means it run susccesfully)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+How to generate SSH key in github:
+purpose:secure alternate way to username & pwd
+$ ssh-keygen -t ed25519 -C "aasifashaik029.com" or
+ssh-keygen -t rsa -b 4096 -C "aasifashaik029.com"
+ssh-keygen -t rsa -f github_rsa
+key is saved  in /home/ec2-user/.ssh/id_ed25519.pub.(private and public key will be saved) 
+ls
+lscat github_rsa.pub(copy the public key)
+
+To test the connection,
+ssh -T git@github.com
+
+We can use only one ssh key, and can link any directory to github
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Pushing from local to remote:
+go to project directory where yout pro is there
+git push origin master
+
+staged/TRACK: make git know the files
+to stage it use git add
+
+created
+added to git
+tried to restore the content (failed)
+
+file already there
+added to git
+made the chages
+restore the content(passed)
+
+
+created a new2.txt file(its a change)
+status is untracked
+tracked the file
+made chages to new2.txt
+status modified
+
+
+Inorder to reflect the changes in github the changes should be  added and ""committed""
+If we make changes in a file in local the file will be modified it can display changes but it wont be tracked 
+so inorder to track ,stage it 
+
+To get help on specific concept use git help <concept>
+/rename find in the manual page
+To rename branch we use
+git branch -m old new
+4 2 1 
+r w x
+
+755(user,grp,others) +x
+rwx r_x r-x
+1.Initialize local git repo
+2.link local repo to github
+3.push
+add real file
+ec2-user
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
